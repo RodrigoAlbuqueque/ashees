@@ -10,9 +10,6 @@ VTEC_Dynamic Tweak Snapdragon
 
 🔸IMPROVE OVERALL PERFORMANCE
 
-🔸Added power save mode function via terminal.
-
-Termux function
 
 
 Flashing via Magisk

@@ -1,11 +1,7 @@
-v3.1.0
+Modify the heat wall increase by 20% *by changing only the values ​​that the system allows to change.  (Based on F6 basics)
 
-Forcing VSync functionality to be controlled by the hardware at the GPU (Graphics Processing Unit) level.
+Disable throttling for all accessible heating zones.  This prevents your device from deteriorating once it reaches a certain temperature limit.
 
-In graphic tech terms, VSync is designed to eliminate screen tearing, which can occur when your graphics card's frame rate is out of sync with your monitor's refresh rate. enable the GPU to handle VSync, which might result in smoother visual output, especially in graphically intensive applications like games.
+Disables this CPU throttling function, which can cause the CPU to use more power or operate at a higher level without throttling.
 
-System will not enforce any limit on the number of simultaneous processes. This could potentially allow more applications to run at the same time, which might improve multi-tasking
-
-The device can operate without imposing any temperature restrictions that may occur.
-
-Optimize system performance under certain workloads by enabling more efficient distribution of processes across available CPU cores.
+Improved beyond the limits of performance.!!

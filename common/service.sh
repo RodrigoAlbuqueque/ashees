@@ -30,14 +30,6 @@ do
     #echo 512 > "$queue/read_ahead_kb"
 done
 
-# Change I/O Optimize a-f
-echo "512" > /sys/block/sda/queue/read_ahead_kb
-echo "512" > /sys/block/sdb/queue/read_ahead_kb
-echo "512" > /sys/block/sdc/queue/read_ahead_kb
-echo "512" > /sys/block/sdd/queue/read_ahead_kb
-echo "512" > /sys/block/sde/queue/read_ahead_kb
-echo "512" > /sys/block/sdf/queue/read_ahead_kb
-
 # Setting Load highspeed
 for gov in /sys/devices/system/cpu/*/cpufreq/*
 do
@@ -61,13 +53,9 @@ if [ -e /sys/class/thermal/thermal_message/sconfig ]; then
 #for a in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc.|sed 's/init.svc.//');do stop $a;done;for b in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc.);do setprop $b stopped;done;for c in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc_);do setprop $c "";done
 
 # Other commands or settings if required
-su -c settings put global enhanced_processing 1
 su -c settings put global hwui.disable_vsync false
 su -c settings put global touch_response_time 0
 su -c settings put global foreground_ram_priority high
-#su -c settings put global animator_duration_scale 0.0024999
-#su -c settings put global transition_animation_scale 0.0024999
-#su -c settings put global window_animation_scale 0.0024999
 u -c cmd power set-fixed-performance-mode-enabled true
 #su -c cmd thermalservice override-status 0
 su -c settings put system power_mode high
@@ -75,7 +63,6 @@ su -c settings put system speed_mode 1
 su -c settings put secure speed_mode_enable 1
 su -c settings put system thermal_limit_refresh_rate 0
 su -c settings put system link_turbo_option 1
-#su -c settings global transition_animation_duration_ratio 0.0024999
 su -c settings put global block_untrusted_touches 0
 
 # ข้อความ
@@ -95,7 +82,6 @@ write /dev/stune/top-app/schedtune.boost 1
 
 # Multiplier
 echo 4 > /proc/sys/kernel/sched_pelt_multiplier
-echo 1 > /proc/sys/kernel/sched_tunable_scaling
 
 # Script
 nohup sh $MODDIR/script/shellscript > /dev/null &

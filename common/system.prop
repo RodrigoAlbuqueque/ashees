@@ -19,6 +19,7 @@ persist.freecache.enable=true
 log.tag.TackManagerService=ERROR
 heat_suppression=0
 sys.thermal.level=0
+persist.sys.enable_templimit=false
 ro.thermctl.level=0
 ENFORCE_PROCESS_LIMIT=false
 

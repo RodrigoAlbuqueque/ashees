@@ -1,7 +1,7 @@
 id=Tweaks_Snapdragon
 name=VTEC_Dynamic
-version=v3.5
-versionCode=137
+version=v3.6
+versionCode=138
 author=REALHARD
 description=Improve overall performance.[Protect your system from bootloop].
 changeBoot=false

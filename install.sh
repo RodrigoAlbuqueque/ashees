@@ -80,7 +80,7 @@ sleep 1
   ui_print " RealHard @xda "
 sleep 1
   ui_print " "
-  ui_print " V 3.1.0 Performance For Rider "
+  ui_print " V 3.1.1 Improved beyond the limits of performance "
 sleep 1
   ui_print " "
   ui_print " Optimization "
@@ -110,7 +110,7 @@ unzip -o "$ZIPFILE" 'script/*' -d $MODPATH >&2
 
 set_permissions() {
   set_perm_recursive $MODPATH 0 0 0755 0644
-  set_perm_recursive $MODPATH/script 0 0 0755 0700
+  set_perm_recursive $MODPATH/script 0 0 0755 0644
   set_perm $MODPATH/system/bin/menu 0 0 0755 0755
   set_perm $MODPATH/system/bin/CLEAN 0 0 0755 0755
   set_perm $MODPATH/system/bin/DON 0 0 0755 0755

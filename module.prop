@@ -3,7 +3,9 @@ name=VTEC_Dynamic
 version=v3.5
 versionCode=137
 author=REALHARD
-description=ðŸš¨ DO WITH YOU OWN RISK ðŸš¨ Improved beyond the limits of performance.
+description=Improve overall performance.[Protect your system from bootloop].
+changeBoot=false
+needRamdisk=false
 
 # CREDITS
 # @modulostk

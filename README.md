@@ -30,4 +30,4 @@ RealHard project This is just a beginner's experiment. If there is any mistake, 
 
 Donate me coffee thank you.
 DOWNLOAD
-[https://buymeacoffee.com/realhard](https://www.paypal.me/realhard3)
+https://www.paypal.me/realhard3

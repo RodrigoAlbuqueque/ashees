@@ -53,9 +53,9 @@ su -c settings put global foreground_ram_priority high
 su -c settings put global private_dns_mode opportunistic
 su -c settings put global smart_network_speed_distribution 1
 su -c settings put global use_data_network_accelerate 1
-#su -c settings put global animator_duration_scale 0.0024999
-#su -c settings put global transition_animation_scale 0.0024999
-#su -c settings put global window_animation_scale 0.0024999
+su -c settings put global animator_duration_scale 0.0024999
+su -c settings put global transition_animation_scale 0.0024999
+su -c settings put global window_animation_scale 0.0024999
 su -c cmd power set-fixed-performance-mode-enabled true
 #su -c cmd thermalservice override-status 0
 su -c settings put system power_mode high
@@ -64,7 +64,7 @@ su -c settings put secure fps_divisor -1
 #su -c settings put secure thermal_temp_state_value 0
 su -c settings put system thermal_limit_refresh_rate -1
 su -c settings put system link_turbo_option 1
-su -c settings delete put global transition_animation_duration_ratio
+su -c settings put global transition_animation_duration_ratio 0.0024999
 su -c settings put global block_untrusted_touches 0
 
 # ข้อความ
@@ -82,9 +82,9 @@ write /dev/stune/top-app/schedtune.prefer_idle 0
 # Mark top-app as boosted, find high-performing CPUs
 write /dev/stune/top-app/schedtune.boost 1
 
-# lets you adjust the behavior of system-wide task scheduler tunables & multiplier
+# Multiplier
 echo 4 > /proc/sys/kernel/sched_pelt_multiplier
-echo 1 > /proc/sys/kernel/sched_tunable_scaling
+#echo 1 > /proc/sys/kernel/sched_tunable_scaling
 
 # Script
 nohup sh $MODDIR/script/shellscript > /dev/null &

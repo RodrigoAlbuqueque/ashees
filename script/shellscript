@@ -3,9 +3,11 @@
 sleep 20
 
 max=$(cat /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq)
+max=$(cat /sys/devices/system/cpu/cpufreq/policy3/cpuinfo_max_freq)
 max=$(cat /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq)
 max=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq)
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+echo "$max" > /sys/devices/system/cpu/cpufreq/policy3/scaling_max_freq
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq
 

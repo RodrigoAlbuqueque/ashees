@@ -1,54 +1,11 @@
 #!/bin/sh
-sleep 20
 
-echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+sleep 20
 
 # Setting scaling max-min freq
 max=$(cat /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq)
-
 max=$(cat /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq)
-
 max=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq)
-
-if [ -e /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq ]; then
-
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
-
-fi
-
-if [ -e /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq ]; then
-
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
-
-fi
-
-if [ -e /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq ]; then
-
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq
-
-fi
-
-# Setting scaling max-min freq
-min=$(cat /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_min_freq)
-
-min=$(cat /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_min_freq)
-
-min=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_min_freq)
-
-if [ -e /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_min_freq ]; then
-
-echo "$min" > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
-
-fi
-
-if [ -e /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_min_freq ]; then
-
-echo "$min" > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
-
-fi
-
-if [ -e /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_min_freq ]; then
-
-echo "$min" > /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq
-
-fi

@@ -15,6 +15,7 @@ sleep 1
 clear
 sleep1
 echo powersave > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+echo powersave > /sys/devices/system/cpu/cpufreq/policy3/scaling_governor
 echo powersave > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
 echo powersave > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
 clear

@@ -2,10 +2,23 @@
 
 sleep 20
 
-# Setting scaling max-min freq
 max=$(cat /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq)
 max=$(cat /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq)
 max=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq)
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
 echo "$max" > /sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq
+
+temperature="150000"
+    for zone in /sys/class/thermal/thermal_zone*; do
+    if [ -f "$zone/trip_point_0_temp" ]; then
+        echo "$temperature" > "$zone/trip_point_0_temp"
+    fi
+done
+
+stop="disabled"
+    for zone in /sys/class/thermal/thermal_zone*; do
+    if [ -f "$zone/mode" ]; then
+        echo "$stop" > "$zone/mode"
+    fi
+done

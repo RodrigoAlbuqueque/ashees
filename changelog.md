@@ -6,5 +6,4 @@ System will not enforce any limit on the number of simultaneous processes. This 
 
 The device can operate without imposing any temperature restrictions that may occur.
 
-[[https://github.com/RealHard23/VTEC_Dynamic/releases/tag/v3.1.0](https://github.com/RealHard23/VTEC_Dynamic/releases/tag/v3.1.0)
-](https://github.com/RealHard23/VTEC_Dynamic/releases/tag/v3.1.0)
+(https://github.com/RealHard23/VTEC_Dynamic/releases/tag/v3.1.0)

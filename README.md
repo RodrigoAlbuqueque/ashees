@@ -26,7 +26,8 @@ Note: Version.no-scale=not adjusted, it will be normal (for people who may not l
 
 Support xiaomi
 
-is an adjustment to increase smoothness and remove some limitations.  But in exchange for increased energy use.
+It improves smoothness and eliminates some limitations.  But in exchange for increased energy and heat consumption.
+
 
 Tested on mi 12, it works fine.  If it is another brand  You must experiment at your own risk.
 

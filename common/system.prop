@@ -1,19 +1,52 @@
+# Set 3D and Rendering Optimization values
+debug.3d.gpu.rendering.enable=1
+persist.sys.composition.type=gpu
+debug.composition.type=gpu
+hw3d.force=1
+ro.gfx.angle.supported=true
+# persist.graphics.egl=angle
+# ro.zygote.disable_gl_preload=1
+debug.sf.hw=1
+debug.hwui.force_gpu=true
+debug.egl.hw=1
+debug.hwc.force_gpu_vsync=1
+persist.sys.ui.hw=1
+
 # Performance tweark
 video.accelerate.hw=1
 debug.performance.tuning=1
 persist.sys.purgeable_assets=1
 persist.freecache.enable=true
 log.tag.TackManagerService=ERROR
+heat_suppression=0
+sys.thermal.level=0
 persist.sys.enable_templimit=false
+ro.thermctl.level=0
+ENFORCE_PROCESS_LIMIT=false
+persist.sys.spc.cpulimit.enabled=false
 
 #Enable Quick Power-On Mode To Reduce Boot-Time 
 ro.config.hw_quickpoweron=true
 ro.config.hw_quickfpson=true
 ro.config.hw_fastdormancy=1
-debug.egl.force_msaa=1
 
-#Gps fix speed
+#Faster App Launch 
+debug.egl.force_msaa=1
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-record=true
+
+# MEMORY OPT
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+# GPS Fix Speed
 ro.gps.fast_fix=1
+
+# GPS Settings:
 ro.gps.agps_provider=1
 ro.gps.ephemeris_age=2000
 ro.gps.ephemeris_daily_update=1

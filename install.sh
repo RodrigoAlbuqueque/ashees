@@ -80,7 +80,7 @@ sleep 1
   ui_print " RealHard @xda "
 sleep 1
   ui_print " "
-  ui_print " V 3.5 Improved all of performance "
+  ui_print " V 3.6 Improved all of performance "
 sleep 1
   ui_print " "
   ui_print " Optimization "

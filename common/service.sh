@@ -20,8 +20,16 @@ do
     echo 0 > "$queue/iostats"
     echo deadline > "$queue/scheduler"
     echo 0 > "$queue/rq_affinity"
-    echo 512 > "$queue/read_ahead_kb"
+    #echo 512 > "$queue/read_ahead_kb"
 done
+
+# Change I/O Optimize a-f
+echo "512" > /sys/block/sda/queue/read_ahead_kb
+echo "512" > /sys/block/sdb/queue/read_ahead_kb
+echo "512" > /sys/block/sdc/queue/read_ahead_kb
+echo "512" > /sys/block/sdd/queue/read_ahead_kb
+echo "512" > /sys/block/sde/queue/read_ahead_kb
+echo "512" > /sys/block/sdf/queue/read_ahead_kb
 
 # Setting Load highspeed
 for gov in /sys/devices/system/cpu/*/cpufreq/*

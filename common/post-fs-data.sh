@@ -8,7 +8,7 @@ while true; do
         resetprop  -n persist.sys.turbosched.enable true
         resetprop  -n persist.sys.turbosched.enable.coreApp.optimizer true
         resetprop  -n persist.sys.turbosched.gaea.enable true
-        
+        resetprop  -n ro.vendor.fps.switch.thermal false
         sleep 1;
     done
 } &

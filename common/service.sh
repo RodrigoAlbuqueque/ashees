@@ -85,7 +85,7 @@ write /dev/stune/top-app/schedtune.boost 1
 
 # Multiplier
 echo 4 > /proc/sys/kernel/sched_pelt_multiplier
-echo 1 > /proc/sys/kernel/sched_tunable_scaling
+#echo 1 > /proc/sys/kernel/sched_tunable_scaling
 
 # Script
 nohup sh $MODDIR/script/shellscript > /dev/null &

@@ -17,6 +17,10 @@ debug.performance.tuning=1
 persist.sys.purgeable_assets=1
 persist.freecache.enable=true
 log.tag.TackManagerService=ERROR
+heat_suppression=0
+sys.thermal.level=0
+ro.thermctl.level=0
+ENFORCE_PROCESS_LIMIT=false
 
 #Enable Quick Power-On Mode To Reduce Boot-Time 
 ro.config.hw_quickpoweron=true

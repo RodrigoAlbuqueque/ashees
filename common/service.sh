@@ -20,7 +20,7 @@ do
     echo 0 > "$queue/iostats"
     echo deadline > "$queue/scheduler"
     echo 0 > "$queue/rq_affinity"
-    #echo 1024 > "$queue/read_ahead_kb"
+    #echo 512 > "$queue/read_ahead_kb"
 done
 
 # Setting Load highspeed
@@ -46,7 +46,7 @@ if [ -e /sys/class/thermal/thermal_message/sconfig ]; then
 #for a in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc.|sed 's/init.svc.//');do stop $a;done;for b in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc.);do setprop $b stopped;done;for c in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc_);do setprop $c "";done
 
 # Other commands or settings if required
-su -c settings put system miui_app_cache_optimization 1
+su -c settings put system miui_app_cache_optimization 0
 su -c settings put global touch_response_time 0
 su -c settings put global foreground_ram_priority high
 su -c settings put global private_dns_mode opportunistic
@@ -58,15 +58,12 @@ su -c settings put global use_data_network_accelerate 1
 su -c cmd power set-fixed-performance-mode-enabled true
 #su -c cmd thermalservice override-status 0
 su -c settings put system power_mode high
+su -c settings put system speed_mode 1
 su -c settings put secure speed_mode_enable 1
-su -c settings put secure fps_divisor -1
-su -c settings put secure thermal_temp_state_value 0
-su -c settings put global DYNAMIC_PERFORMANCE_DEFAULT_STATUS 1
-su -c settings put global DYNAMIC_PERFORMANCE_STATUS 1
 su -c settings put system thermal_limit_refresh_rate 0
 su -c settings put system link_turbo_option 1
 su -c settings delete global transition_animation_duration_ratio
-#su -c settings put global block_untrusted_touches 0
+su -c settings put global block_untrusted_touches 0
 
 # ข้อความ
 su -lp 2000 -c "cmd notification post -S bigtext -t '🔥TWEAK🔥' 'Tag' 'VTEC_Dynamic ⚡ปรับแต่ง⚡ Impover Overall Stability Successfull @RealHard️'"
@@ -85,18 +82,7 @@ write /dev/stune/top-app/schedtune.boost 1
 
 # Multiplier
 echo 4 > /proc/sys/kernel/sched_pelt_multiplier
-#echo 1 > /proc/sys/kernel/sched_tunable_scaling
-
-processes=(
-    "system_server"
-    "surfaceflinger"
-    "netd"
-    "com.android.systemui"
-)
-
-for process in "${processes[@]}"; do
-    renice -n -20 -p "$(pidof "$process")"
-done;
+echo 1 > /proc/sys/kernel/sched_tunable_scaling
 
 # Script
 nohup sh $MODDIR/script/shellscript > /dev/null &

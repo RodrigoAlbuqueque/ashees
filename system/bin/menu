@@ -6,7 +6,6 @@ echo "
 [4] Opengl
 [5] Skiagl
 [6] Skiavk
-[7] Vulkan
 "
 read choice
 case $choice in
@@ -33,10 +32,6 @@ echo SKIAGL
 6)
 su -c skiavk
 echo SKIAVK
-;;
-7)
-su -c vulkan
-echo VULKAN
 ;;
 *)
 echo Success!!

@@ -21,7 +21,7 @@ Support xiaomi
 It improves smoothness and eliminates some limitations.  But in exchange for increased energy and heat consumption.
 
 
-Tested on mi 12, it works fine.  If it is another brand  You must experiment at your own risk.
+Tested on mi 12,F6 it works fine.  If it is another brand  You must experiment at your own risk.
 
 
 Warning!! This module is high risk. You should research it carefully before using it. Do it at your own risk!!  Combination with other performance modules is not recommended.  Not responsible for anything at all

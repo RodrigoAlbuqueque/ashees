@@ -30,3 +30,6 @@ Tested on mi 12, it works fine.  If it is another brand  You must experiment at 
 Warning!! This module is high risk. You should research it carefully before using it. Do it at your own risk!!  Combination with other performance modules is not recommended.  Not responsible for anything at all
 
 RealHard project This is just a beginner's experiment. If there is any mistake, I apologize. I accept all advice. Thank you.
+
+Donate me coffee thank you.
+https://buymeacoffee.com/realhard

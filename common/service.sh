@@ -56,7 +56,7 @@ if [ -e /sys/class/thermal/thermal_message/sconfig ]; then
 su -c settings put global hwui.disable_vsync false
 su -c settings put global touch_response_time 0
 su -c settings put global foreground_ram_priority high
-su -c cmd power set-fixed-performance-mode-enabled true
+u -c cmd power set-fixed-performance-mode-enabled true
 #su -c cmd thermalservice override-status 0
 su -c settings put system power_mode high
 su -c settings put system speed_mode 1
@@ -64,6 +64,31 @@ su -c settings put secure speed_mode_enable 1
 su -c settings put system thermal_limit_refresh_rate 0
 su -c settings put system link_turbo_option 1
 su -c settings put global block_untrusted_touches 0
+
+# Disable ccci debugging
+echo 0 /sys/kernel/ccci/debug
+
+# Stop tracing and debugging
+echo 0 /sys/kernel/tracing/tracing_on
+echo 0 /proc/sys/kernel/perf_event_paranoid
+echo 0 /proc/sys/kernel/debug_locks
+echo 0 /proc/sys/kernel/perf_cpu_time_max_percent
+echo off /proc/sys/kernel/printk_devkmsg
+ 
+ # Disable battery saver module
+if [ -f /sys/module/battery_saver/parameters/enabled ]; then
+	if grep -qo '[0-9]\+' /sys/module/battery_saver/parameters/enabled; then
+		echo 0 /sys/module/battery_saver/parameters/enabled
+	else
+		echo N /sys/module/battery_saver/parameters/enabled
+	fi
+fi
+
+if [ -d /proc/ppm ]; then
+	for ppm in $(cat /proc/ppm/policy_status | grep -E 'PWR_THRO|THERMAL' | awk -F'[][]' '{print $2}'); do
+		echo "$ppm 0" /proc/ppm/policy_status
+	done
+fi
 
 # ข้อความ
 su -lp 2000 -c "cmd notification post -S bigtext -t '🔥TWEAK🔥' 'Tag' 'VTEC_Dynamic ⚡ปรับแต่ง⚡ Impover Overall Stability Successfull @RealHard️'"

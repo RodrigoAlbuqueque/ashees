@@ -80,7 +80,7 @@ sleep 1
   ui_print " RealHard @xda "
 sleep 1
   ui_print " "
-  ui_print " V 3.3.3 Improved beyond the limits of performance "
+  ui_print " V 3.5 Improved all of performance "
 sleep 1
   ui_print " "
   ui_print " Optimization "
@@ -118,6 +118,5 @@ set_permissions() {
   set_perm $MODPATH/system/bin/opengl 0 0 0755 0755
   set_perm $MODPATH/system/bin/skiagl 0 0 0755 0755
   set_perm $MODPATH/system/bin/skiavk 0 0 0755 0755
-  set_perm $MODPATH/system/bin/vulkan 0 0 0755 0755
   set_perm $MODPATH/system/bin/daemon 0 0 0755
 }

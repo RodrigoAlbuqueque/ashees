@@ -8,8 +8,6 @@ VTEC_Dynamic Tweak Snapdragon
 
 🔸Use Optimized GPU processing mode to render performance graphics.
 
-🔸 Added read ahead size determines the amount of data that is read from the disk in advance, in order to improve performance by reducing disk access times.
-
 🔸IMPROVE OVERALL PERFORMANCE
 
 🔸Added power save mode function via terminal.

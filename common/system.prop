@@ -24,6 +24,7 @@ persist.sys.enable_templimit=false
 ro.thermctl.level=0
 ENFORCE_PROCESS_LIMIT=false
 persist.sys.spc.cpulimit.enabled=false
+persist.sys.trim_rendernode.enable=true
 
 #Enable Quick Power-On Mode To Reduce Boot-Time 
 ro.config.hw_quickpoweron=true

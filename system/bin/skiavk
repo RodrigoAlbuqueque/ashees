@@ -30,9 +30,6 @@ echo "   ▒ "
 echo "   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒"
 echo "- "
 sleep 0.2
-setprop debug.hwui.renderer skiavk
-setprop ro.hwui.use_vulkan=true
-setprop debug.renderengine.backend skiavkthreaded
-setprop debug.angle.overlay FPS:Skiavk*PipelineCache*
+(setprop debug.hwui.renderer skiavk;for a in $(pm list packages|grep -v ia.mo|cut -f2 -d:);do am force-stop "$a"&done)>/dev/null 2>&1&
 sleep 0.2
 echo "Success"

@@ -15,9 +15,6 @@ VTEC_Dynamic Tweak Snapdragon
 Flashing via Magisk
 
 
-Note: Version.no-scale=not adjusted, it will be normal (for people who may not like fast animations)
-
-
 
 Support xiaomi
 

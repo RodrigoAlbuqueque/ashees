@@ -20,7 +20,7 @@ do
     echo 0 > "$queue/iostats"
     echo deadline > "$queue/scheduler"
     echo 0 > "$queue/rq_affinity"
-    #echo 512 > "$queue/read_ahead_kb"
+    echo 512 > "$queue/read_ahead_kb"
 done
 
 # Setting Load highspeed

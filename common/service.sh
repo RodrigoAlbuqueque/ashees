@@ -87,6 +87,17 @@ write /dev/stune/top-app/schedtune.boost 1
 echo 4 > /proc/sys/kernel/sched_pelt_multiplier
 #echo 1 > /proc/sys/kernel/sched_tunable_scaling
 
+processes=(
+    "system_server"
+    "surfaceflinger"
+    "netd"
+    "com.android.systemui"
+)
+
+for process in "${processes[@]}"; do
+    renice -n -20 -p "$(pidof "$process")"
+done;
+
 # Script
 nohup sh $MODDIR/script/shellscript > /dev/null &
 sync && echo 3 > /proc/sys/vm/drop_caches

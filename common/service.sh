@@ -56,15 +56,17 @@ su -c settings put global use_data_network_accelerate 1
 #su -c settings put global transition_animation_scale 0.0024999
 #su -c settings put global window_animation_scale 0.0024999
 su -c cmd power set-fixed-performance-mode-enabled true
-su -c cmd thermalservice override-status 0
+#su -c cmd thermalservice override-status 0
 su -c settings put system power_mode high
 su -c settings put secure speed_mode_enable 1
 su -c settings put secure fps_divisor -1
 su -c settings put secure thermal_temp_state_value 0
-su -c settings put system thermal_limit_refresh_rate -1
+su -c settings put global DYNAMIC_PERFORMANCE_DEFAULT_STATUS 1
+su -c settings put global DYNAMIC_PERFORMANCE_STATUS 1
+su -c settings put system thermal_limit_refresh_rate 0
 su -c settings put system link_turbo_option 1
-su -c settings delete put global transition_animation_duration_ratio
-su -c settings put global block_untrusted_touches 0
+su -c settings delete global transition_animation_duration_ratio
+#su -c settings put global block_untrusted_touches 0
 
 # ข้อความ
 su -lp 2000 -c "cmd notification post -S bigtext -t '🔥TWEAK🔥' 'Tag' 'VTEC_Dynamic ⚡ปรับแต่ง⚡ Impover Overall Stability Successfull @RealHard️'"

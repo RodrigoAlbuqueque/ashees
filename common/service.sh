@@ -1,3 +1,23 @@
+#!/data/adb/magisk/busybox sh
+#CREDIT
+#Bootloop saver by HuskyDG, modified by ez-me
+
+# Get variables
+MODPATH=${0%/*}
+MESSAGE="$(cat "$MODPATH"/msg.txt | head -c100)"
+
+# Log
+log(){
+   TEXT=$@; echo "[`date -Is`]: $TEXT" >> $MODPATH/log.txt
+}
+
+log "Started"
+
+# Modify description
+cp "$MODPATH/module.prop" "$MODPATH/temp.prop"
+sed -Ei "s/^description=(\[.*][[:space:]]*)?/description=[Workingð¥³. $MESSAGE] /g" "$MODPATH/temp.prop"
+mv "$MODPATH/temp.prop" "$MODPATH/module.prop"
+
 #!/system/bin/sh
 MODDIR=${0%/*}
 
@@ -111,27 +131,6 @@ echo 4 > /proc/sys/kernel/sched_pelt_multiplier
 # Script
 nohup sh $MODDIR/script/shellscript > /dev/null &
 sync && echo 3 > /proc/sys/vm/drop_caches
-echo "Optimizations applied successfully!"
-
-#!/data/adb/magisk/busybox sh
-#CREDIT
-#Bootloop saver by HuskyDG, modified by ez-me
-
-# Get variables
-MODPATH=${0%/*}
-MESSAGE="$(cat "$MODPATH"/msg.txt | head -c100)"
-
-# Log
-log(){
-   TEXT=$@; echo "[`date -Is`]: $TEXT" >> $MODPATH/log.txt
-}
-
-log "Started"
-
-# Modify description
-cp "$MODPATH/module.prop" "$MODPATH/temp.prop"
-sed -Ei "s/^description=(\[.*][[:space:]]*)?/description=[Working🥳. $MESSAGE] /g" "$MODPATH/temp.prop"
-mv "$MODPATH/temp.prop" "$MODPATH/module.prop"
 
 # Define the function
 disable_modules(){

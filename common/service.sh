@@ -41,7 +41,7 @@ echo "512" > /sys/block/sdf/queue/read_ahead_kb
 # Setting Load highspeed
 for gov in /sys/devices/system/cpu/*/cpufreq/*
 do
-   echo 99 > "$gov/hispeed_load"
+   echo 95 > "$gov/hispeed_load"
    echo 1 > "$gov/boost"
 done
 
@@ -61,14 +61,10 @@ if [ -e /sys/class/thermal/thermal_message/sconfig ]; then
 #for a in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc.|sed 's/init.svc.//');do stop $a;done;for b in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc.);do setprop $b stopped;done;for c in $(getprop|grep thermal|cut -f1 -d]|cut -f2 -d[|grep -F init.svc_);do setprop $c "";done
 
 # Other commands or settings if required
-su -c settings put global enhanced_processing 2
+su -c settings put global enhanced_processing 1
 su -c settings put global hwui.disable_vsync false
-su -c settings put system miui_app_cache_optimization 0
 su -c settings put global touch_response_time 0
 su -c settings put global foreground_ram_priority high
-su -c settings put global private_dns_mode opportunistic
-su -c settings put global smart_network_speed_distribution 1
-su -c settings put global use_data_network_accelerate 1
 #su -c settings put global animator_duration_scale 0.0024999
 #su -c settings put global transition_animation_scale 0.0024999
 #su -c settings put global window_animation_scale 0.0024999

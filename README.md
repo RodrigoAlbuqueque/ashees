@@ -15,8 +15,11 @@ VTEC_Dynamic Tweak Snapdragon 🔸Optimize SQLite settings for faster database a
 🔸Optimizes RAM Enhanced.
 
 Termux function
+
 su -c CLEAN = Clear Cache
+
 su -c SON = Powersave
+
 su -c DON = Default
 
 Changes and use this script at your own risk ! !

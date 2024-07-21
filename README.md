@@ -22,6 +22,8 @@ su -c SON = Powersave
 
 su -c DON = Default
 
+Flash via Magisk is an adjustment to smooth out sharpness and remove some limitations.  But in exchange for increased energy use.
+
 Changes and use this script at your own risk ! !
 
 RealHard project This is just a beginner's experiment. If there is any mistake, I apologize. I accept all advice. Thank you.

@@ -1,6 +1,8 @@
 # RealHard-ProJect
 https://t.me/PROJECT_RealHard
-VTEC_Dynamic Tweak Snapdragon 🔸Optimize SQLite settings for faster database access !! Increase the read-ahead buffer.
+VTEC_Dynamic Tweak Snapdragon 
+
+🔸Optimize SQLite settings for faster database access !! Increase the read-ahead buffer.
 
 🔸Reduce the delay when opening the application.
 
@@ -12,7 +14,6 @@ VTEC_Dynamic Tweak Snapdragon 🔸Optimize SQLite settings for faster database a
 
 🔸Added power save mode function via terminal.
 
-🔸Optimizes RAM Enhanced.
 
 Termux function
 

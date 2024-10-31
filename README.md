@@ -1,4 +1,4 @@
-# RealHard-ProJect
+# VTEC_Dynamic
 https://t.me/PROJECT_RealHard
 VTEC_Dynamic Tweak Snapdragon 
 

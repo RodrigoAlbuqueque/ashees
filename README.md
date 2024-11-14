@@ -10,8 +10,6 @@ VTEC_Dynamic Tweak Snapdragon
 
 🔸Use Optimized GPU processing mode to render performance graphics.
 
-🔸Changes a parameter in the workqueue kernel module to make it more power efficient.
-
 🔸Added power save mode function via terminal.
 
 

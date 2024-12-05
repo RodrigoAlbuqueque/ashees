@@ -13,6 +13,7 @@ VTEC_Dynamic Tweak Snapdragon
 🔸Added power save mode function via terminal.
 
 Support xiaomi
+Tested on mi 12, it works fine.  If it is another brand  You must experiment at your own risk.
 
 Termux function
 

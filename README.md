@@ -12,8 +12,14 @@ VTEC_Dynamic Tweak Snapdragon
 
 🔸Added power save mode function via terminal.
 
+
 Support xiaomi
+
+
+is an adjustment to increase smoothness and remove some limitations.  But in exchange for increased energy use.
+
 Tested on mi 12, it works fine.  If it is another brand  You must experiment at your own risk.
+
 
 Termux function
 
@@ -23,7 +29,9 @@ su -c SON = Powersave
 
 su -c DON = Default
 
-Flashing via Magisk is an adjustment to increase smoothness and remove some limitations.  But in exchange for increased energy use.
+
+Flashing via Magisk 
+
 
 Changes and use this script at your own risk ! !
 

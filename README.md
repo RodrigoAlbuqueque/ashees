@@ -11,6 +11,9 @@ VTEC_Dynamic Tweak Snapdragon
 🔸Added power save mode function via terminal.
 
 
+Note: Version.no-scale=not adjusted, it will be normal (for people who may not like fast animations)
+
+
 Support xiaomi
 
 

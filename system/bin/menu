@@ -1,0 +1,23 @@
+echo "
+[1] Clear cache
+[2] PowerSave
+[3] Default
+"
+read choice
+case $choice in
+1)
+su -c CLEAN
+echo Clear cache
+;;
+2)
+su -c SON
+echo PowerSave
+;;
+3)
+su -c DON
+echo Default
+;;
+*)
+echo Success!!
+;;
+esac

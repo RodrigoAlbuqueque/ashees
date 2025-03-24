@@ -1,0 +1,32 @@
+echo "RealHard ProJect"
+ram=$(awk '/MemAvailable/{print $2/1024;exit}' /proc/meminfo)
+echo ""
+echo "Free Memory Before Boosting: $ram MB"
+echo ""
+echo "Clearing cache, please wait ..."
+sync
+echo -n "."
+sleep 1
+echo "3" > /proc/sys/vm/drop_caches
+am kill-all
+echo ""
+echo -n "Stopping background services, please wait ... "
+cmd activity services | cut -d ' ' -f 2 | while read -r service; do
+  am stop-service -f "$service" >/dev/null 2>&1
+done
+echo "Done"
+echo ""
+echo -n "Clearing /storage/emulated/0/Android/data/ cache, please wait ... "
+find /storage/emulated/0/Android/data/ -iname "cache" -type d -not -path "*/com.android.chrome/*" -print0 | xargs -0 rm -rf >/dev/null 2>&1
+echo "Done"
+echo ""
+echo -n "Clearing dalvik cache, please wait ... "
+su -c "mount -o remount,rw /system && rm -rf /data/dalvik-cache/* && rm -rf /cache/dalvik-cache/* && mount -o remount,ro /system" >/dev/null 2>&1
+echo "Done"
+echo ""
+ram=$(awk '/MemAvailable/{print $2/1024;exit}' /proc/meminfo)
+echo "* Your cache has been cleared. Free Memory After Boosting: $ram MB"
+echo ""
+echo "Done"
+echo ""
+exit 0

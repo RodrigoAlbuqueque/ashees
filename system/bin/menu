@@ -1,0 +1,44 @@
+echo "RealHard ProJect"
+echo "
+[1] Clear cache
+[2] PowerSave
+[3] Default
+[4] Opengl
+[5] Skiagl
+[6] Skiavk
+[7] Vulkan
+"
+read choice
+case $choice in
+1)
+su -c CLEAN
+echo Clear cache
+;;
+2)
+su -c SON
+echo PowerSave
+;;
+3)
+su -c DON
+echo Default
+;;
+4)
+su -c opengl
+echo OPENGL
+;;
+5)
+su -c skaigl
+echo SKIAGL
+;;
+6)
+su -c skiavk
+echo SKIAVK
+;;
+7)
+su -c vulkan
+echo VULKAN
+;;
+*)
+echo Success!!
+;;
+esac

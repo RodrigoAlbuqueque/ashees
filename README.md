@@ -14,11 +14,6 @@ VTEC_Dynamic Tweak Snapdragon
 
 Termux function
 
-su -c CLEAN = Clear Cache
-
-su -c SON = Powersave
-
-su -c DON = Default
 
 Flashing via Magisk
 
